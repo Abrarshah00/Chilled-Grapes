@@ -1,0 +1,88 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  position: relative;
+  height: 100px;
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  z-index: 3;
+  color: white;
+  margin: 0;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 250px; /* Default height for larger screens */
+  width: auto;
+}
+
+/* Default menu styling */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-container li {
+  list-style: none;
+  // color: white;
+}
+
+/* Button styling */
+.readmore-button {
+  width: 200px;
+  padding: 10px 15px;
+  background: linear-gradient(90deg, #73e0a9 0%, #5b68df 100%);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0px 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Adjust height to fit content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  .background-image {
+    height: 150px; /* Reduce image height for smaller screens */
+    width: auto;
+  }
+
+  .readmore-button {
+    width: 150px; /* Reduce button width for smaller screens */
+    padding: 8px 12px; /* Reduce button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+    height: 150px; /* Further reduce image height for very small screens */
+  }
+
+  .readmore-button {
+    width: 120px; /* Further adjust button width */
+    padding: 6px 10px; /* Further adjust button padding */
+  }
+  .menu-container {
+    display: none; /* Hide menu items on smaller screens */
+  }
+  .title {
+    font-size: 22px;
+  }
+}

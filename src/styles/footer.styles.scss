@@ -1,0 +1,133 @@
+.footer-container {
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer-title-box {
+  width: 40%;
+  padding: 10px 40px;
+  position: relative; /* Set relative positioning to position the image inside this box */
+}
+
+.footer-title-box h1,
+.footer-title-box p {
+  z-index: 2; /* Ensure text content is above the image */
+  position: relative;
+}
+
+.footer-title-box img {
+  position: absolute;
+  bottom: 0; /* Position the image at the bottom of the container */
+  left: 0; /* Align the image to the left of the container */
+  z-index: 1; /* Ensure the image is behind the text */
+  width: 500px; /* Adjust the width of the image as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footer-menu-box {
+  display: flex;
+  align-items: flex-start;
+  width: 60%;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.icon-container {
+  background: linear-gradient(90deg, #73e0a9 0%, #5b68df 100%);
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.social-icons-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 50%;
+}
+
+.footer-lorem-text {
+  font-size: 14px;
+  color: white;
+}
+
+.links-title {
+  background: linear-gradient(90deg, #73e0a9 0%, #5b68df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.company-links {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  .footer-title-box {
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center text content */
+    padding: 20px; /* Adjust padding for mobile */
+    margin-bottom: 20px; /* Space between title and menu */
+  }
+
+  .footer-title-box img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Limit the maximum width */
+  }
+
+  .footer-menu-box {
+    width: 100%; /* Full width for mobile */
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between sections */
+  }
+
+  .footer-menu-box > div {
+    width: 100%; /* Full width for each section */
+    text-align: center; /* Center text in each section */
+  }
+
+  .social-icons-container {
+    gap: 10px; /* Adjust space between icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title-box img {
+    max-width: fit-content; /* Limit max-width for very small screens */
+  }
+
+  .footer-lorem-text {
+    font-size: 12px; /* Reduce font size for very small screens */
+  }
+
+  .links-title {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .company-links {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+  .social-icons-container {
+    width: 100%;
+  }
+  .footer-menu-box {
+    margin-left: 0px;
+  }
+}

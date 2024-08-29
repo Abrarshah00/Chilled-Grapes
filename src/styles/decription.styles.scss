@@ -1,0 +1,75 @@
+.description-container {
+  display: flex;
+  justify-content: space-between; /* Default: Space between text and image content */
+  padding: 20px;
+  margin: 10rem 0;
+  flex-wrap: wrap; /* Allow wrapping for responsive layout */
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  flex: 1;
+  /* Center horizontally on smaller screens */
+}
+
+.description-image-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /* Center horizontally on smaller screens */
+}
+
+.description-image-content img {
+  position: absolute;
+}
+
+.description-image-content img:first-child {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust size as needed */
+  height: 500px; /* Default height */
+}
+
+.description-image-content img:last-child {
+  z-index: 2;
+  width: 50%; /* Adjust size to fit in the middle */
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .description-container {
+    flex-direction: column; /* Stack content and images vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text horizontally */
+    margin: 0rem 1rem;
+  }
+
+  .description-content {
+    flex: none; /* Reset flex to default for stacking */
+    width: 90%; /* Adjust width to fit on small screens */
+    margin-bottom: 200px; /* Add space between content and images */
+  }
+
+  .description-image-content {
+    flex: none; /* Reset flex to default for stacking */
+    width: 90%; /* Adjust width to fit on small screens */
+  }
+
+  .description-image-content img:first-child {
+    width: 100%; /* Full width for small screens */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+
+  .description-image-content img:last-child {
+    width: 80%; /* Adjust width to fit on small screens */
+  }
+}
